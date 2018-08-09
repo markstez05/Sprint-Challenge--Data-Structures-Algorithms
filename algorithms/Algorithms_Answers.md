@@ -3,7 +3,7 @@ Add your answers to the Algorithms exercises here..
 A. O(n^3)
 B. O(log n)
 C. O(n^3)
-D.
+D. O(n^2)
 E. O(n^3)
 F. O(n)
 G. O(n)
@@ -18,3 +18,4 @@ G. O(n)
     });
     return maxDiff;
 }
+
