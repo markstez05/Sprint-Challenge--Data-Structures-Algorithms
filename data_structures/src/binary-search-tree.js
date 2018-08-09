@@ -8,16 +8,13 @@ class BinarySearchTree {
   depthFirstForEach(cb) {
     /* Your code here */
 
-      const travel = (node) => {
-        cb(node.value);
-        if (node.left !== null) {
-          travel(node.left);
-        }
-        if (node.right !== null) {
-          travel(node.right);
-        }
-      }
-      travel(this);
+   cb(this.value);
+   if (this.left) {
+     this.left.depthFirstForEach(cb);
+   }
+   if (this.right) {
+     this.right.depthFirstForEach(cb);
+   }
   }
 
   breadthFirstForEach(cb) {

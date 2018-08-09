@@ -52,14 +52,14 @@ class Heap {
     const leftChildIndex = index * 2 + 1;
     const rightChildIndex = index * 2 + 2;
     let maxChild;
-    
+
     if (this.storage[leftChildIndex] && this.storage[rightChildIndex]) {
       maxChild = this.storage[leftChildIndex] > this.storage[rightChildIndex] ? leftChildIndex : rightChildIndex;
     } else if (this.storage[leftChildIndex]) {
       maxChild = leftChildIndex;
     } else if (this.storage[rightChildIndex]) {
       maxChild = rightChildIndex;
-    } 
+    }
 
     if (this.storage[index] < this.storage[maxChild]) {
       [this.storage[maxChild], this.storage[index]] = [this.storage[index], this.storage[maxChild]];
